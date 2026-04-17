@@ -63,20 +63,18 @@ export const SiteHeader = ({ transparentOnTop = false }: SiteHeaderProps) => {
             <NavLink
               key={item.to}
               to={item.to}
+              end={item.to === "/"}
               className={({ isActive }) =>
-                `relative text-sm font-medium tracking-wide transition-colors hover:text-gold ${
+                `group relative text-sm font-medium tracking-wide transition-colors hover:text-gold ${
                   isActive ? "text-gold" : "text-ivory/90"
-                } after:absolute after:-bottom-1.5 after:left-0 after:h-px after:bg-gold after:transition-all after:duration-500 ${
-                  // active underline
-                  ""
                 }`
               }
             >
               {({ isActive }) => (
-                <span className="relative">
+                <span className="relative inline-block py-1">
                   {item.label}
                   <span
-                    className={`absolute -bottom-1.5 left-0 h-px bg-gold transition-all duration-500 ${
+                    className={`pointer-events-none absolute -bottom-0.5 left-0 h-px bg-gold transition-all duration-500 ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   />
@@ -107,6 +105,7 @@ export const SiteHeader = ({ transparentOnTop = false }: SiteHeaderProps) => {
                   <NavLink
                     key={item.to}
                     to={item.to}
+                    end={item.to === "/"}
                     className={({ isActive }) =>
                       `border-b border-ivory/10 py-4 font-serif text-xl transition-colors ${
                         isActive ? "text-gold" : "text-ivory hover:text-gold"
