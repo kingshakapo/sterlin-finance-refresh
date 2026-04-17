@@ -52,9 +52,9 @@ export const SiteFooter = () => {
         <div className="container-wide flex flex-col items-start justify-between gap-4 py-6 text-xs text-ivory/50 md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Sterling Finance &amp; Investment. All rights reserved.</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-gold transition-colors">Privacy</a>
-            <a href="#" className="hover:text-gold transition-colors">Terms</a>
-            <a href="#" className="hover:text-gold transition-colors">Disclosures</a>
+            <Link to="/privacy" className="hover:text-gold transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-gold transition-colors">Terms</Link>
+            <Link to="/disclosures" className="hover:text-gold transition-colors">Disclosures</Link>
           </div>
         </div>
       </div>
