@@ -45,7 +45,7 @@ export const SiteHeader = ({ transparentOnTop = false }: SiteHeaderProps) => {
         <div className="container-wide flex h-9 items-center justify-between text-[11px] uppercase tracking-[0.22em] text-ivory/70">
           <div className="flex items-center gap-6">
             <span className="inline-flex items-center gap-2"><MapPin className="h-3 w-3 text-gold" /> Cape Town · South Africa</span>
-            <span className="inline-flex items-center gap-2"><Phone className="h-3 w-3 text-gold" /> +27 (0) 21 000 0000</span>
+            <span className="inline-flex items-center gap-2"><Phone className="h-3 w-3 text-gold" /> +27 64 080 6800</span>
           </div>
           <div className="flex items-center gap-6">
             <Link to="/careers" className="hover:text-gold transition-colors">Careers</Link>
