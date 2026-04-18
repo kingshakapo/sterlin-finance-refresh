@@ -20,21 +20,21 @@ const SLIDES = [
     title: "Disciplined strategies, built for the long horizon.",
     body: "Multi-asset portfolios designed around your objectives — from capital preservation to high-conviction growth.",
     image: heroBoardroom,
-    alt: "Executive boardroom overlooking a city skyline at dusk",
+    alt: "South African street mural with bold geometric African patterns",
   },
   {
     eyebrow: "Investment Banking",
     title: "Advisory at the intersection of capital and ambition.",
     body: "M&A, capital raising and strategic counsel for businesses building the next chapter.",
     image: heroTowers,
-    alt: "Modern financial district skyscrapers illuminated at blue hour",
+    alt: "South African township mural depicting African figures in rich symbolic patterns",
   },
   {
     eyebrow: "Brokerage",
     title: "Global market access, executed with precision.",
     body: "Equities, fixed income, FX and derivatives — across South African and international venues.",
     image: heroTrading,
-    alt: "Global trading floor with illuminated market data boards",
+    alt: "South African mural with abstract African geometric and tribal patterns",
   },
 ];
 
