@@ -105,18 +105,26 @@ const About = () => (
       </div>
     </section>
 
-    {/* Leadership */}
+    {/* Board */}
     <section className="bg-card py-24 md:py-32">
       <div className="container-wide">
         <SectionEyebrow>Leadership</SectionEyebrow>
-        <h2 className="mt-6 font-serif text-4xl leading-tight text-navy md:text-5xl">The people behind Sterling.</h2>
-        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {LEADERS.map((p) => (
-            <div key={p.name} className="border border-border bg-ivory p-8">
-              <div className="aspect-square bg-navy/10" />
-              <h3 className="mt-6 font-serif text-xl text-navy">{p.name}</h3>
-              <p className="mt-1 text-sm uppercase tracking-[0.18em] text-gold">{p.role}</p>
-            </div>
+        <h2 className="mt-6 font-serif text-4xl leading-tight text-navy md:text-5xl">Meet the Board.</h2>
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          {BOARD.map((p, i) => (
+            <article key={p.name} className="border border-border bg-ivory p-8 md:p-10">
+              <div className="flex items-start gap-6">
+                <div className="hidden h-20 w-20 shrink-0 items-center justify-center bg-navy/5 sm:flex">
+                  <span className="font-mono text-sm tracking-widest text-gold">0{i + 1}</span>
+                </div>
+                <div>
+                  <h3 className="font-serif text-2xl text-navy">{p.name}</h3>
+                  <p className="mt-1 text-xs uppercase tracking-[0.18em] text-gold">{p.role}</p>
+                </div>
+              </div>
+              <div className="mt-6 h-px w-12 bg-gold" />
+              <p className="mt-6 text-sm leading-relaxed text-slate">{p.bio}</p>
+            </article>
           ))}
         </div>
       </div>
