@@ -23,7 +23,7 @@ const Contact = () => {
     formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/info@sterlinfininvestment.com", {
+      const res = await fetch("https://formsubmit.co/ajax/forms@sterlinfininvestment.com", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: formData,
