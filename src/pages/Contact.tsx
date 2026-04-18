@@ -97,8 +97,15 @@ const Contact = () => {
               </li>
             </ul>
 
-            <div className="mt-12 aspect-[4/3] w-full bg-navy/10 grid place-items-center text-slate text-sm">
-              <span>Cape Town · Foreshore</span>
+            <div className="mt-12 aspect-[4/3] w-full overflow-hidden">
+              <img
+                src={capeTownImg}
+                alt="Cape Town Foreshore skyline with Table Mountain"
+                loading="lazy"
+                width={1280}
+                height={960}
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
 
