@@ -33,7 +33,7 @@ const Disclosures = () => (
       },
       {
         heading: "Complaints",
-        body: "Sterling has a formal complaints process. Complaints may be submitted in writing to compliance@sterlinfin.com and will be acknowledged and addressed in accordance with our Complaints Resolution Policy."
+        body: "Sterling has a formal complaints process. Complaints may be submitted in writing to compliance@sterlinfininvestment.com and will be acknowledged and addressed in accordance with our Complaints Resolution Policy."
       },
       {
         heading: "FAIS Ombud",
