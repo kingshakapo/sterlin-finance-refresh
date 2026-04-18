@@ -12,17 +12,43 @@ import { toast } from "@/hooks/use-toast";
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
-      toast({
-        title: "Message sent",
-        description: "Thank you. A member of our team will be in touch shortly.",
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", "78dceba4-d534-430b-8e69-f5a4a89f8304");
+    formData.append("subject", "New enquiry from sterlinfin.com");
+    formData.append("from_name", "Sterling Website");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
       });
-    }, 600);
+      const data = await res.json();
+      if (data.success) {
+        form.reset();
+        toast({
+          title: "Message sent",
+          description: "Thank you. A member of our team will be in touch shortly.",
+        });
+      } else {
+        toast({
+          title: "Submission failed",
+          description: data.message || "Please try again or email info@sterlinfin.com.",
+          variant: "destructive",
+        });
+      }
+    } catch {
+      toast({
+        title: "Network error",
+        description: "Please try again or email info@sterlinfin.com.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
