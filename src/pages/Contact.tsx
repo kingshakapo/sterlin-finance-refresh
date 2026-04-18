@@ -12,17 +12,43 @@ import { toast } from "@/hooks/use-toast";
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      (e.target as HTMLFormElement).reset();
-      toast({
-        title: "Message sent",
-        description: "Thank you. A member of our team will be in touch shortly.",
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    formData.append("access_key", "78dceba4-d534-430b-8e69-f5a4a89f8304");
+    formData.append("subject", "New enquiry from sterlinfin.com");
+    formData.append("from_name", "Sterling Website");
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
       });
-    }, 600);
+      const data = await res.json();
+      if (data.success) {
+        form.reset();
+        toast({
+          title: "Message sent",
+          description: "Thank you. A member of our team will be in touch shortly.",
+        });
+      } else {
+        toast({
+          title: "Submission failed",
+          description: data.message || "Please try again or email info@sterlinfin.com.",
+          variant: "destructive",
+        });
+      }
+    } catch {
+      toast({
+        title: "Network error",
+        description: "Please try again or email info@sterlinfin.com.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -83,27 +109,28 @@ const Contact = () => {
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <Label htmlFor="name" className="text-xs uppercase tracking-[0.18em] text-slate">Name</Label>
-                  <Input id="name" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="name" name="name" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
                 <div>
                   <Label htmlFor="company" className="text-xs uppercase tracking-[0.18em] text-slate">Company</Label>
-                  <Input id="company" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="company" name="company" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
               </div>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <Label htmlFor="email" className="text-xs uppercase tracking-[0.18em] text-slate">Email</Label>
-                  <Input id="email" type="email" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="email" name="email" type="email" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
                 <div>
                   <Label htmlFor="phone" className="text-xs uppercase tracking-[0.18em] text-slate">Phone</Label>
-                  <Input id="phone" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="phone" name="phone" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
               </div>
               <div>
                 <Label htmlFor="message" className="text-xs uppercase tracking-[0.18em] text-slate">Message</Label>
-                <Textarea id="message" required rows={5} className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                <Textarea id="message" name="message" required rows={5} className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
               </div>
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
               <Button type="submit" disabled={submitting} className="mt-4 self-start rounded-none bg-navy px-8 text-ivory hover:bg-navy-deep">
                 {submitting ? "Sending…" : "Send message"}
               </Button>
