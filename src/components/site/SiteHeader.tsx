@@ -86,7 +86,7 @@ export const SiteHeader = ({ transparentOnTop = false }: SiteHeaderProps) => {
 
         <div className="hidden lg:block">
           <Button asChild className="rounded-none bg-gold text-navy hover:bg-gold-bright">
-            <Link to="/contact">Speak with us</Link>
+            <Link to="/contact">Contact us</Link>
           </Button>
         </div>
 
@@ -116,7 +116,7 @@ export const SiteHeader = ({ transparentOnTop = false }: SiteHeaderProps) => {
                   </NavLink>
                 ))}
                 <Button asChild className="mt-8 rounded-none bg-gold text-navy hover:bg-gold-bright">
-                  <Link to="/contact">Speak with us</Link>
+                  <Link to="/contact">Contact us</Link>
                 </Button>
               </div>
             </SheetContent>
