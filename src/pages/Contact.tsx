@@ -18,17 +18,18 @@ const Contact = () => {
     setSubmitting(true);
     const form = e.currentTarget;
     const formData = new FormData(form);
-    formData.append("access_key", "78dceba4-d534-430b-8e69-f5a4a89f8304");
-    formData.append("subject", "New enquiry from sterlinfin.com");
-    formData.append("from_name", "Sterling Website");
+    formData.append("_subject", "New enquiry from sterlinfin.com");
+    formData.append("_template", "table");
+    formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const res = await fetch("https://formsubmit.co/ajax/info@sterlinfin.com", {
         method: "POST",
+        headers: { Accept: "application/json" },
         body: formData,
       });
       const data = await res.json();
-      if (data.success) {
+      if (res.ok && (data.success === "true" || data.success === true)) {
         form.reset();
         toast({
           title: "Message sent",
