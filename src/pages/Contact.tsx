@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
+import capeTownImg from "@/assets/cape-town-office.jpg";
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -96,8 +97,15 @@ const Contact = () => {
               </li>
             </ul>
 
-            <div className="mt-12 aspect-[4/3] w-full bg-navy/10 grid place-items-center text-slate text-sm">
-              <span>Cape Town · Foreshore</span>
+            <div className="mt-12 aspect-[4/3] w-full overflow-hidden">
+              <img
+                src={capeTownImg}
+                alt="Cape Town Foreshore skyline with Table Mountain"
+                loading="lazy"
+                width={1280}
+                height={960}
+                className="h-full w-full object-cover"
+              />
             </div>
           </div>
 
