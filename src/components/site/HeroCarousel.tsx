@@ -2,28 +2,39 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImg from "@/assets/hero-cityscape.jpg";
+import heroCity from "@/assets/hero-cityscape.jpg";
+import heroBoardroom from "@/assets/hero-boardroom.jpg";
+import heroTowers from "@/assets/hero-towers.jpg";
+import heroTrading from "@/assets/hero-trading.jpg";
 
 const SLIDES = [
   {
     eyebrow: "The Sterling Capital Advantage",
     title: "Capital, conviction, and the access to deploy both.",
     body: "We partner with institutions, corporates and private clients to navigate complex markets with clarity and discipline.",
+    image: heroCity,
+    alt: "Cape Town skyline at dusk with Table Mountain",
   },
   {
     eyebrow: "Asset Management",
     title: "Disciplined strategies, built for the long horizon.",
     body: "Multi-asset portfolios designed around your objectives — from capital preservation to high-conviction growth.",
+    image: heroBoardroom,
+    alt: "Executive boardroom overlooking a city skyline at dusk",
   },
   {
     eyebrow: "Investment Banking",
     title: "Advisory at the intersection of capital and ambition.",
     body: "M&A, capital raising and strategic counsel for businesses building the next chapter.",
+    image: heroTowers,
+    alt: "Modern financial district skyscrapers illuminated at blue hour",
   },
   {
     eyebrow: "Brokerage",
     title: "Global market access, executed with precision.",
     body: "Equities, fixed income, FX and derivatives — across South African and international venues.",
+    image: heroTrading,
+    alt: "Global trading floor with illuminated market data boards",
   },
 ];
 
@@ -38,14 +49,22 @@ export const HeroCarousel = () => {
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden bg-navy text-ivory">
       <div className="absolute inset-0 -z-10">
-        <img
-          src={heroImg}
-          alt="Cape Town skyline at dusk with Table Mountain"
-          className="h-full w-full object-cover"
-          width={1920}
-          height={1080}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/40 via-navy-deep/70 to-navy" />
+        {SLIDES.map((slide, i) => (
+          <img
+            key={i}
+            src={slide.image}
+            alt={slide.alt}
+            className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+              i === index ? "opacity-100" : "opacity-0"
+            }`}
+            width={1920}
+            height={1080}
+            loading={i === 0 ? "eager" : "lazy"}
+            fetchPriority={i === 0 ? "high" : "low"}
+            aria-hidden={i !== index}
+          />
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/50 via-navy-deep/75 to-navy" />
       </div>
 
       <div className="container-wide flex min-h-[100svh] flex-col justify-end pb-24 pt-40 md:pb-32">
