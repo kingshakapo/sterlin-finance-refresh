@@ -19,11 +19,27 @@ const TIMELINE = [
   { year: "Today", text: "A multi-disciplinary firm serving clients across the continent." },
 ];
 
-const LEADERS = [
-  { name: "A. Mokoena", role: "Chief Executive Officer" },
-  { name: "J. van der Merwe", role: "Head of Investment Banking" },
-  { name: "P. Naidoo", role: "Head of Asset Management" },
-  { name: "L. Adebayo", role: "Head of Brokerage" },
+const BOARD = [
+  {
+    name: "Mr. Alkhan Bin-Saldini",
+    role: "Chairman",
+    bio: "Mr. Alkhan Bin-Saldin handles the complete responsibility for South Africa Foundation's investment portfolios and long-term investment policies that include South Africa Foundation Endowment as well as the organization's other joint ventures and initiatives. In 2008, he was honored by the Africa Economic Forum with the \"Achievement in Leadership Award\". In his previous role as President at South Africa Foundation, Mr. AlKhan managed the Shared Services Organization in South Africa Foundation that included the Finance, Human Resources, Business Process Improvement, Information Technology, Procurement, and Support Services Directorates. Prior to joining South Africa Foundation, Mr. Alkhan was the Human Resources Manager at SAGas Company Limited. Other current positions held by Mr. Alkhan include Chairman of the Board of Directors for South Africa Solar Technologies, Managing Director of MTN, representing MTN and SA Foundation LLC and a Board Member in local and international companies.",
+  },
+  {
+    name: "Mr. Marc Philip Roe",
+    role: "CEO",
+    bio: "Mr. Marc Philip Roe was the Chief Executive Officer of Qatar Petroleum International until 2010. Other Board Memberships: South Africa Water & Electricity Company; Advisory Board of the State of South Africa.",
+  },
+  {
+    name: "Ms. Victoria Brown",
+    role: "Chief Investment Officer",
+    bio: "Ms. Victoria Brown is the Chief Investment Officer at Sterling FInvestment Corporation and has over 15 years of professional experience. Ms Brown joined Sterling FInvestment in 2009 as Head of Brokerage before being appointed Head of Investments & Treasury in 2012. She was re-appointed as Head of Brokerage in 2014 and then assumed the position of Chief Capital Markets Officer in 2018. Prior to joining Sterling FInvestment, she worked for a number of leading financial institutions including Investcorp and Chemical Bank. Ms. Brown holds an MBA from Glamorgan University, UK. She is also a board member of Sterling FInvestment subsidiary.",
+  },
+  {
+    name: "Mr. Marwan Al Khan Ghassan",
+    role: "Board Member",
+    bio: "Mr. Marwan Al Khan Ghassan, an experienced professional with years of experience in corporate finance and diverse international experience in Banking & Finance. Established a record of innovative strategy creation and execution that produces operational excellence; a self-motivated and resourceful individual with a proven ability to provide key financial data, support and reporting to assist in key business decisions. Excellent verbal and written communication skills and able to build strong relationships both within and outside of a finance department, as well as effectively communicating financial information to non-finance colleagues. Possesses strong financial control and reporting skills and rigorously ensures that all statutory and corporate obligations are met.",
+  },
 ];
 
 const About = () => (
