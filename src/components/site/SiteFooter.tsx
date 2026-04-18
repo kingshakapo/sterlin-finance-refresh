@@ -15,7 +15,7 @@ export const SiteFooter = () => {
           <div className="mt-6 flex items-center gap-4">
             <a href="#" aria-label="LinkedIn" className="text-ivory/60 hover:text-gold transition-colors"><Linkedin className="h-5 w-5" /></a>
             <a href="#" aria-label="Twitter" className="text-ivory/60 hover:text-gold transition-colors"><Twitter className="h-5 w-5" /></a>
-            <a href="mailto:info@sterlinfin.com" aria-label="Email" className="text-ivory/60 hover:text-gold transition-colors"><Mail className="h-5 w-5" /></a>
+            <a href="mailto:info@sterlinfininvestment.com" aria-label="Email" className="text-ivory/60 hover:text-gold transition-colors"><Mail className="h-5 w-5" /></a>
           </div>
         </div>
 
