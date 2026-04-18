@@ -78,8 +78,15 @@ const Contact = () => {
               <li className="flex gap-4">
                 <Phone className="mt-1 h-5 w-5 shrink-0 text-gold" />
                 <div>
-                  <div className="font-serif text-lg">Telephone</div>
-                  <a href="tel:+27640806800" className="text-slate hover:text-gold transition-colors">+27 64 080 6800</a>
+                  <div className="font-serif text-lg">Telephone / WhatsApp</div>
+                  <a
+                    href="https://wa.me/27640806800"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-slate hover:text-gold transition-colors"
+                  >
+                    +27 64 080 6800
+                  </a>
                 </div>
               </li>
               <li className="flex gap-4">

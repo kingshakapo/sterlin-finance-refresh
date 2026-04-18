@@ -88,7 +88,7 @@ export const HeroCarousel = () => {
           <div className="relative mt-10 flex flex-wrap items-center gap-6">
             <Button asChild size="lg" className="group rounded-none bg-gold px-8 text-navy hover:bg-gold-bright">
               <Link to="/contact">
-                Speak with our team
+                Contact us
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
