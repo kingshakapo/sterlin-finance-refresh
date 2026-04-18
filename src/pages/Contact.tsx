@@ -109,27 +109,28 @@ const Contact = () => {
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <Label htmlFor="name" className="text-xs uppercase tracking-[0.18em] text-slate">Name</Label>
-                  <Input id="name" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="name" name="name" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
                 <div>
                   <Label htmlFor="company" className="text-xs uppercase tracking-[0.18em] text-slate">Company</Label>
-                  <Input id="company" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="company" name="company" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
               </div>
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
                   <Label htmlFor="email" className="text-xs uppercase tracking-[0.18em] text-slate">Email</Label>
-                  <Input id="email" type="email" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="email" name="email" type="email" required className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
                 <div>
                   <Label htmlFor="phone" className="text-xs uppercase tracking-[0.18em] text-slate">Phone</Label>
-                  <Input id="phone" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                  <Input id="phone" name="phone" className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
                 </div>
               </div>
               <div>
                 <Label htmlFor="message" className="text-xs uppercase tracking-[0.18em] text-slate">Message</Label>
-                <Textarea id="message" required rows={5} className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
+                <Textarea id="message" name="message" required rows={5} className="mt-2 rounded-none border-0 border-b border-input bg-transparent px-0 focus-visible:ring-0 focus-visible:border-gold" />
               </div>
+              <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
               <Button type="submit" disabled={submitting} className="mt-4 self-start rounded-none bg-navy px-8 text-ivory hover:bg-navy-deep">
                 {submitting ? "Sending…" : "Send message"}
               </Button>
