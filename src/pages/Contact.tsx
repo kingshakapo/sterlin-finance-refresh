@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "@/hooks/use-toast";
+import capeTownImg from "@/assets/cape-town-office.jpg";
 
 const Contact = () => {
   const [submitting, setSubmitting] = useState(false);
