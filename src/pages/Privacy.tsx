@@ -40,7 +40,7 @@ const Privacy = () => (
       },
       {
         heading: "Your rights",
-        body: "You have the right to access, correct or delete the personal information we hold about you, to object to certain processing, and to lodge a complaint with the Information Regulator. To exercise any of these rights, please contact privacy@sterlinfin.com."
+        body: "You have the right to access, correct or delete the personal information we hold about you, to object to certain processing, and to lodge a complaint with the Information Regulator. To exercise any of these rights, please contact privacy@sterlinfininvestment.com."
       },
       {
         heading: "Security",
@@ -48,7 +48,7 @@ const Privacy = () => (
       },
       {
         heading: "Contact",
-        body: "Questions regarding this policy may be directed to our Information Officer at privacy@sterlinfin.com or to our registered office in Cape Town."
+        body: "Questions regarding this policy may be directed to our Information Officer at privacy@sterlinfininvestment.com or to our registered office in Cape Town."
       }
     ]}
   />

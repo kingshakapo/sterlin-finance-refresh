@@ -23,7 +23,7 @@ const Contact = () => {
     formData.append("_captcha", "false");
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/info@sterlinfin.com", {
+      const res = await fetch("https://formsubmit.co/ajax/info@sterlinfininvestment.com", {
         method: "POST",
         headers: { Accept: "application/json" },
         body: formData,
@@ -38,14 +38,14 @@ const Contact = () => {
       } else {
         toast({
           title: "Submission failed",
-          description: data.message || "Please try again or email info@sterlinfin.com.",
+          description: data.message || "Please try again or email info@sterlinfininvestment.com.",
           variant: "destructive",
         });
       }
     } catch {
       toast({
         title: "Network error",
-        description: "Please try again or email info@sterlinfin.com.",
+        description: "Please try again or email info@sterlinfininvestment.com.",
         variant: "destructive",
       });
     } finally {
@@ -86,7 +86,7 @@ const Contact = () => {
                 <Mail className="mt-1 h-5 w-5 shrink-0 text-gold" />
                 <div>
                   <div className="font-serif text-lg">Email</div>
-                  <a href="mailto:info@sterlinfin.com" className="text-slate hover:text-gold transition-colors">info@sterlinfin.com</a>
+                  <a href="mailto:info@sterlinfininvestment.com" className="text-slate hover:text-gold transition-colors">info@sterlinfininvestment.com</a>
                 </div>
               </li>
               <li className="flex gap-4">
