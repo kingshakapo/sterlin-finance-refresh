@@ -49,7 +49,7 @@ export const SiteHeader = ({ transparentOnTop = false }: SiteHeaderProps) => {
           </div>
           <div className="flex items-center gap-6">
             <Link to="/careers" className="hover:text-gold transition-colors">Careers</Link>
-            <Link to="/contact" className="hover:text-gold transition-colors">Client Login</Link>
+            
           </div>
         </div>
       </div>
