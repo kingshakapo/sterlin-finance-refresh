@@ -43,7 +43,7 @@ export const SiteFooter = () => {
             The Sterling Building<br />
             Foreshore, Cape Town 8001<br />
             South Africa<br />
-            <a href="tel:+27210000000" className="mt-3 inline-block hover:text-gold transition-colors">+27 (0) 21 000 0000</a>
+            <a href="tel:+27640806800" className="mt-3 inline-block hover:text-gold transition-colors">+27 64 080 6800</a>
           </address>
         </div>
       </div>
